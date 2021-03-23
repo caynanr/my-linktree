@@ -13,42 +13,45 @@
 }
 
 body {
-  max-width: 100vw;
-  max-height: 100vh;
-  background: linear-gradient(95deg, #316f4a, #36a19a, #114968) center no-repeat;
+  background: linear-gradient(95deg, #316f4a, #36a19a, #114968) no-repeat center;
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
 }
 
 main div.profile {
-  height: 29vh;
+  height: 40vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.6rem;
 }
 
 main div.profile img {
-  width: 108px;
+  width: 104px;
+  height: 104px;
 }
 
 main .nome {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 600;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 main .subtitulo {
-  font-weight: 400;
+  font-weight: 300;
   color: #e3e3e3;
 }
 
 main .acompanhe {
-  font-size: 0.9rem;
-  margin-top: 0.8rem;
+  font-size: 1rem;
+  margin-top: 1.2rem;
 }
 
 main section.container {
+  width: 40vw;
+  min-height: 90vh;
+  margin-top: 2rem;
   background: #fff;
   position: relative;
   display: flex;
@@ -56,7 +59,6 @@ main section.container {
   align-items: center;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-  margin-top: 2.5rem;
 }
 
 .social-media {
@@ -68,7 +70,7 @@ main section.container {
   justify-content: center;
   padding: 0.3rem;
   position: absolute;
-  top: -30px;
+  top: -28px;
 }
 
 .social-media a {
@@ -82,23 +84,55 @@ main section.container {
 }
 
 .links {
-  background: #316f4a;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1.5rem;
+  top: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+div.links span {
+  color: #134d6a;
+  font-weight: 400;
+  font-size: 1.1rem;
   padding: 1rem;
 }
 
-div.links {
-  color: #000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 1rem;
+div.links a {
+  color: #134d6a;
 }
+
 .links img {
-  width: 60%;
+  width: 90%;
   border-radius: 16px;
   box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 1rem;
+}
+
+.links a.btn {
+  color: #fff;
+  background: #144e6b;
+  width: 300px;
+  padding: 1rem;
+  margin-top: 5rem;
+  border-radius: 16px;
+}
+
+.links a:last-child {
+  padding: 5px;
+  margin-top: 2rem;
+}
+
+/*RESPOSIVIDADE*/
+
+@media only screen and (max-width: 750px) {
+  main section.container {
+    width: 100vw;
+  }
+
+  .links img {
+    width: 100%;
+  }
 }
